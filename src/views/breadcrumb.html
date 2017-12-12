@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @@include('../components/meta.html')
+
+    <title>eAdmin</title>
+
+    @@include('../components/link.html')
+    <link rel="stylesheet" href="../dep/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../dep/datatable/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/static/css/eadmin.css">
+    <link rel="stylesheet" href="/static/css/admin-index.css">
+</head>
+
+<body>
+@@include('../components/side.html')
+
+<div class="econtent">
+    @@include('../components/header.html')
+    <div class="econtent-body ead-container-main">
+        <!--<div class="row-col">-->
+            <!--<ul class="breadcrumb pull-left">-->
+                <!--<li><a href="#">首页</a></li>-->
+                <!--<li class="active">商品列表</li>-->
+            <!--</ul>-->
+            <!--<div class="pull-right">-->
+                <!--<a class="btn btn-default" href="admin_goods_edit.html">添加商品</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div>
+            <nav aria-label="breadcrumb">
+                <ol class="ui-breadcrumb">
+                    <li class="ui-breadcrumb-item active" aria-current="page">Home</li>
+                </ol>
+            </nav>
+
+            <nav aria-label="breadcrumb">
+                <ol class="ui-breadcrumb">
+                    <li class="ui-breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="ui-breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
+            </nav>
+
+            <nav aria-label="breadcrumb">
+                <ol class="ui-breadcrumb">
+                    <li class="ui-breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="ui-breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="ui-breadcrumb-item active" aria-current="page">Data</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    @@include('../components/footer.html')
+</div>
+
+<script src="../dep/jquery/jquery-1.10.2.min.js"></script>
+<script src="../dist/js/eui.min.js"></script>
+<script src="../dep/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../src/eadmin/eadmin.js"></script>
+<script src="../dep/datatable/jquery.dataTables.js"></script>
+
+<script src="js/index.js"></script>
+</body>
+</html>

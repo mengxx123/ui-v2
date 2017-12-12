@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>步骤条</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../dist/css/ui.min.css">
+<link rel="stylesheet" href="../src/eadmin/eadmin.css">
+<link rel="stylesheet" href="../dep/font-awesome/font-awesome.min.css">
+</head>
+
+<body>
+<div class="ead-container-main">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">步骤条（Steps）</div>
+                <div class="panel-body">
+                    <p>步骤条主要用于引导用户按照流程完成任务。当任务较为复杂时，可以简化任务流程。</p>
+                    <ul class="nav nav-steps nav-justified">
+                        <li class="nav-item step-done"><span class="nav-link"><i class="fa fa-check"></i> 已完成</span></li>
+                        <li class="nav-item active"><span class="nav-link"><span class="badge">2</span> 进行中</span></li>
+                        <li class="nav-item step-undo"><span class="nav-link"><span class="badge">3</span> 未进行</span></li>
+                    </ul>
+                    <h4>操作失败：</h4>
+                    <ul class="nav nav-steps nav-justified">
+                        <li class="nav-item step-done"><span class="nav-link"><i class="fa fa-check"></i> 已完成</span></li>
+                        <li class="nav-item step-error"><span class="nav-link"> <i class="fa fa-close"></i> 失败</span></li>
+                        <li class="nav-item step-undo"><span class="nav-link"><span class="badge">3</span> 未进行</span></li>
+                    </ul>
+                    <h4>示例：</h4>
+                    <ul class="nav nav-steps nav-justified">
+                        <li class="nav-item active"><span class="nav-link" href="#tab11"><span class="badge">1</span> 拍下商品</span></li>
+                        <li id="step-second" class="nav-item step-undo"><span class="nav-link"><span class="badge">2</span> 付款</span></li>
+                        <li id="step-third" class="nav-item step-undo"><span class="nav-link" href="#tab13" data-toggle="tab"><span class="badge">3</span> 确认收货</span></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab21" class="tab-pane fade in active">
+                            <h3>拍下商品</h3>
+                            <p>请拍下商品。</p>
+                            <button id="to-second" class="btn btn-success">下一步</button>
+                        </div>
+                        <div id="tab22" class="tab-pane fade">
+                            <div>
+                                <button id="to-third" class="btn btn-success">付款</button>
+                            </div>
+                        </div>
+                        <div id="tab23" class="tab-pane fade">
+                            <div>
+                                <h3>标题3</h3>
+                                <p>这是一段文字。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../dep/jquery/jquery-1.10.2.min.js"></script>
+<script src="../dist/js/eui.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#to-second').on('click', function() {
+            $('#step-second').tab('show');
+        });
+    });
+</script>
+</body>
+</html>

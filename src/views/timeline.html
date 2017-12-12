@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>时间轴 - eUI</title>
+<link rel="stylesheet" href="../dist/css/eui.css">
+<link rel="stylesheet" href="../src/eadmin/eadmin.css">
+<link rel="stylesheet" href="../dist/css/timeline.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="../dep/font-awesome/font-awesome.min.css">
+</head>
+<body class="gray-bg">
+<div class="ead-container-main">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="wrapper wrapper-content">
+                <div class="row animated fadeInRight">
+                    <div class="col-sm-12">
+                        <div class="text-center">
+                            <span>预览：</span>
+                            <a href="#" class="btn btn-xs btn-primary" id="lightVersion">浅色</a>
+                            <a href="#" class="btn btn-xs btn-primary" id="darkVersion">深色</a>
+                            <a href="#" class="btn btn-xs btn-primary" id="leftVersion">布局切换</a>
+                        </div>
+                        <div id="vertical-timeline" class="timeline timeline-light">
+                            <div class="timeline-item">
+                                <div class="timeline-icon blue-bg">
+                                    <i class="fa fa-briefcase"></i>
+                                </div>
+                                <div class="timeline-content">
+                                    <p>上一年的销售业绩发布会。总结产品营销和销售趋势及销售的现状。</p>
+                                    <span class="vertical-date">
+                                    今天 <br>
+                                    <small>2月3日</small>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon blue-bg">
+                                    <i class="fa fa-file-text"></i>
+                                </div>
+
+                                <div class="timeline-content">
+                                    <h2>这是标题</h2>
+                                    <p>这是一段内容。</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon lazur-bg">
+                                    <i class="fa fa-coffee"></i>
+                                </div>
+
+                                <div class="timeline-content">
+                                    <h2>喝咖啡休息</h2>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon yellow-bg">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+
+                                <div class="timeline-content">
+                                    <h2>给李四打电话</h2>
+                                    <p>给李四打电话分配本月工作任务</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-icon lazur-bg">
+                                    <i class="fa fa-user-md"></i>
+                                </div>
+
+                                <div class="timeline-content">
+                                    <h2>公司年会</h2>
+                                    <p>发年终奖啦，啦啦啦~~</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="../dep/jquery/jquery-1.10.2.min.js"></script>
+<script src="../dist/js/eui.min.js"></script>
+<script src="../src/eadmin/eadmin.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#lightVersion").click(function (event) {
+            event.preventDefault();
+            $("body").removeClass('bg-white');
+            $('body').addClass("gray-bg");
+            $("#vertical-timeline").removeClass("timeline-dark");
+            $("#vertical-timeline").addClass("timeline-light")
+        });
+        $("#darkVersion").click(function (event) {
+            event.preventDefault();
+            $("body").removeClass("gray-bg");
+            $('body').addClass('bg-white');
+            $("#vertical-timeline").removeClass("timeline-light");
+            $("#vertical-timeline").addClass("timeline-dark")
+        });
+        $("#leftVersion").click(function (event) {
+            event.preventDefault();
+            $("#vertical-timeline").toggleClass("center-orientation")
+        })
+    });
+</script>
+</body>
+</html>

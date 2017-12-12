@@ -1,0 +1,29 @@
+// stylelint-disable selector-no-qualifying-type
+
+//
+// Base styles
+//
+
+.ui-switch {
+
+}
+.mu-switch {
+    position: relative;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.mu-switch input[type=checkbox] {
+    display: none;
+}
+.mu-switch * {
+    pointer-events: none;
+}
+.mu-switch input[type=checkbox]:checked+.mu-switch-wrapper .mu-switch-track {
+    background-color: rgba(126,87,194,.5);
+}

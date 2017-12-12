@@ -1,0 +1,9 @@
+build/*.js
+config/*.js
+# dist
+dep/
+dist/
+.idea/
+node_modules/
+/tmp
+todo.md

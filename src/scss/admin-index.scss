@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 聊天窗口 */
+.chat-box {
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    right: 80px;
+    z-index: 10000;
+    background: #fff;
+    border: 1px solid #e7eaec;
+    width: 230px;
+    height: 320px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.chat-box:active {
+    display: block;
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 80px;
+    background: #fff;
+    border: 1px solid #e7eaec;
+    width: 230px;
+    height: 320px;
+    border-radius: 4px;
+}
+
+.chat-box.ng-small-chat {
+    display: block;
+}
+
+.body-small .chat-box {
+    bottom: 70px;
+    right: 20px;
+}
+
+.chat-box.active {
+    display: block;
+}
+
+.chat-box-header {
+    background: #2f4050;
+    padding: 8px 15px;
+    font-weight: 700;
+    color: #fff;
+    font-size: 14px;
+}
+
+.chat-box .chat-date {
+    opacity: .6;
+    font-size: 10px;
+    font-weight: 400
+}
+
+.chat-box-body {
+    height: 225px;
+    padding: 15px;
+    overflow: auto;
+}
+
+.chat-box-body .author-name {
+    font-weight: 700;
+    margin-bottom: 3px;
+    font-size: 11px
+}
+
+.chat-box-body > div {
+    padding-bottom: 20px
+}
+
+.chat-box-body .chat-message {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    line-height: 14px;
+    max-width: 80%;
+    background: #f3f3f4;
+    margin-bottom: 10px;
+}
+
+.chat-box-body .chat-message.active {
+    background: #1ab394;
+    color: #fff;
+}
+
+.chat-box-body .left {
+    text-align: left;
+    clear: both;
+}
+
+.chat-box-body .left .chat-message {
+    float: left;
+}
+
+.chat-box-body .right {
+    text-align: right;
+    clear: both;
+}
+
+.chat-box-body .right .chat-message {
+    float: right;
+}
+
+.chat-box .form-chat {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+
+}

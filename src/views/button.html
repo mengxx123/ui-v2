@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @@include('../components/meta.html')
+
+    <title>eAdmin</title>
+
+    @@include('../components/link.html')
+    <link rel="stylesheet" href="../dep/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../dep/datatable/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/static/css/eadmin.css">
+    <link rel="stylesheet" href="/static/css/admin-index.css">
+    <style>
+        .column-id {
+            width: 80px;
+        }
+
+        .column-name {
+        }
+
+        .column-category {
+            width: 100px;
+        }
+
+        .column-price {
+            width: 100px;
+        }
+
+        .column-on-sale {
+            width: 100px;
+        }
+
+        .column-operate {
+            width: 100px;
+        }
+
+        .column-num {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+@@include('../components/side.html')
+
+<div class="econtent">
+    <nav class="econtent-header navbar navbar-default" role="navigation">
+        <div class="ead-container">
+            <div class="navbar-header">
+                <div class="navbar-form">
+                    <a id="menu-minimalize" class="btn btn-primary btn-min"><i class="fa fa-bars"></i></a>
+                    <input class="form-control" placeholder="请输入您需要查找的内容 ...">
+                </div>
+            </div>
+            <div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item active"><a class="nav-link" href="#">iOS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">SVN</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            主题 <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">jmeter</a></li>
+                            <li><a href="#">EJB</a></li>
+                            <li><a href="#">Jasper Report</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">分离的链接</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">另一个分离的链接</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="econtent-body ead-container-main">
+        <div class="row-col">
+            <ul class="breadcrumb pull-left">
+                <li><a href="#">首页</a></li>
+                <li class="active">商品列表</li>
+            </ul>
+            <div class="pull-right">
+                <a class="btn btn-default" href="admin_goods_edit.html">添加商品</a>
+            </div>
+        </div>
+        <div>
+
+            <a class="ui-btn ui-btn-primary" href="#">Primary</a>
+            <a class="ui-btn ui-btn-secondary" href="#">secondary</a>
+            <a class="ui-btn ui-btn-success" href="#">success</a>
+            <a class="ui-btn ui-btn-info" href="#">info</a>
+            <a class="ui-btn ui-btn-warning" href="#">warning</a>
+            <a class="ui-btn ui-btn-danger" href="#">danger</a>
+            <a class="ui-btn ui-btn-link" href="#">link</a>
+
+
+            <h1>标题</h1>
+            <h1>h1</h1>
+            <h2>h2</h2>
+            <h3>h3</h3>
+            <h4>h4</h4>
+            <h5>h5</h5>
+            <h6>h6</h6>
+        </div>
+    </div>
+    <footer class="econtent-footer">
+        <div class="ead-container-main">
+            <p class="efooter-copyright">Theme by <a href="#">eAdmin</a></p>
+        </div>
+    </footer>
+</div>
+
+<script src="../dep/jquery/jquery-1.10.2.min.js"></script>
+<script src="../dist/js/eui.min.js"></script>
+<script src="../dep/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../src/eadmin/eadmin.js"></script>
+<script src="../dep/datatable/jquery.dataTables.js"></script>
+
+<script src="js/index.js"></script>
+</body>
+</html>

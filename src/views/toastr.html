@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>通知</title>
+<link rel="stylesheet" href="../dist/css/eui.min.css">
+<link rel="stylesheet" href="../src/eadmin/eadmin.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="../dep/font-awesome/font-awesome.min.css">
+<link rel="stylesheet" href="../dist/css/toastr.css">
+</head>
+<body>
+<div class="ead-container-main">
+    <div class="col-sm-6">
+        <div class="panel panel-default">
+            <header class="panel-heading">提示消息（Toast）</header>
+            <div class="panel-body">
+                <p>Toast 用来向用户显示信息，不同于 Javascript 的 alert， 它不会打断用户的操作，因此用户体验比较好。</p>
+                <p>常用来显示短时间的提示信息。比如提示用户当前操作的状态反馈等等。</p>
+                <button id="show-toast"class="btn btn-primary" type="button">显示</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <header class="panel-heading">消息</header>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>方法</th>
+                            <th>说明</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>toastr['success']("Hello World");</td>
+                            <td>显示成功消息。success 可换成info、warning、error</td>
+                        </tr>
+                        <tr>
+                            <td>toastr.success("title", "content")</td>
+                            <td>显示成功消息</td>
+                        </tr>
+                        <tr>
+                            <td>toastr.clear()</td>
+                            <td>清除所有消息</td>
+                        </tr>
+                        <tr>
+                            <td>toastr.clear(toast)</td>
+                            <td>清除某个消息</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <header class="panel-heading">参数介绍</header>
+                <div class="panel-body">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>选项</th>
+                            <th>默认值</th>
+                            <th>说明</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                "showEasing": "swing",
+                                "hideEasing": "linear",
+                                "showMethod": "fadeIn",
+                                "hideMethod": "fadeOut"</td>
+                            <td>true</td>
+                            <td>点击对话框周围位置隐藏对话框</td>
+                        </tr>
+                        <tr>
+                            <td>progressBar</td>
+                            <td>false</td>
+                            <td>显示进度条</td>
+                        </tr>
+                        <tr>
+                            <td>closeButton</td>
+                            <td>false</td>
+                            <td>显示关闭按钮</td>
+                        </tr>
+                        <tr>
+                            <td>showDuration</td>
+                            <td>false</td>
+                            <td>显示动画时间（毫秒）</td>
+                        </tr>
+                        <tr>
+                            <td>hideDuration</td>
+                            <td>false</td>
+                            <td>隐藏动画时间（毫秒）</td>
+                        </tr>
+                        <tr>
+                            <td>timeOut</td>
+                            <td>false</td>
+                            <td>显示时间（毫秒）</td>
+                        </tr>
+                        <tr>
+                            <td>extendedTimeOut</td>
+                            <td>false</td>
+                            <td>指标离开消息后的显示时间（毫秒）</td>
+                        </tr>
+                        <tr>
+                            <td>positionClass</td>
+                            <td>toast-top-right</td>
+                            <td>位置类toast-top-right右上
+                                toast-bottom-right右下
+                                toast-bottom-left左下
+                                toast-top-left左上
+                                toast-top-full-width 顶部全宽
+                                toast-bottom-full-width 底部全宽
+                                toast-top-center顶部居中
+                                toast-bottom-center底部居中</td>
+                        </tr>
+                        <tr>
+                            <td>onclick</td>
+                            <td>undefined</td>
+                            <td>点击事件回调</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../dep/jquery/jquery-1.10.2.min.js"></script>
+<script src="../dist/js/eui.min.js"></script>
+<script src="../dist/js/eui.js"></script>
+<script src="js/common.js"></script>
+<script src="../src/toastr/toastr.js"></script>
+<script>
+    $(function () {
+        $('#show-toast').on('click', function() {
+            toastr.success("Hello World", 'Hi', {
+                progressBar: true,
+                closeButton: true,
+                positionClass: 'toast-top-right',
+                //timeOut: 1000000,
+                //extendedTimeOut: 1000000
+            });
+        });
+        //toastr.options.showEasing = 'swing'
+        //toastr.options.hideEasing = 'linear';
+        //toastr.options.showMethod = 'fadeIn';
+        //toastr.options.hideMethod = 'fadeOut';
+    });
+</script>
+<script>
+
+
+</script>
+</body>
+</html>

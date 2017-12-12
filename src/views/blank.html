@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>空白页面</title>
+<link rel="stylesheet" href="../dist/css/ui.min.css">
+<link rel="stylesheet" href="../src/eadmin/eadmin.css">
+    <link rel="stylesheet" href="../src/resizable.css">
+<link rel="stylesheet" href="../dep/font-awesome/font-awesome.min.css">
+
+<style>
+    .icon {
+        display: inline-block;
+    }
+    .icon-spin:before {
+        -webkit-animation: icon-spin 2s infinite linear;
+        animation: icon-spin 2s infinite linear;
+    }
+
+    @-webkit-keyframes icon-spin {
+        0% {
+            color: #f00;
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            color: #f90;
+            -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+        }
+    }
+
+    @keyframes icon-spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+        }
+    }
+
+    .icon-loading {
+        font-size: 50px;
+    }
+    .hehe:before {
+        transform: rotate(180deg);
+    }
+    .text {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+    .test {
+        color: #f90;
+        transform: rotate(180deg);
+    }
+    @keyframes test {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+    }
+
+
+    .fa-spin {
+        -webkit-animation: fa-spin 2s infinite linear;
+        animation: fa-spin 2s infinite linear;
+    }
+    .fa-pulse {
+        -webkit-animation: fa-spin 1s infinite steps(8);
+        animation: fa-spin 1s infinite steps(8);
+    }
+    @-webkit-keyframes fa-spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+        }
+    }
+    @keyframes fa-spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+        }
+    }
+    .fa-pulse {
+        -webkit-animation: fa-spin 1s infinite steps(8);
+        animation: fa-spin 1s infinite steps(8);
+    }
+    .fa-rotate-90 {
+        -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+    .ttt {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 150px;
+        height: 150px;
+        background-color: #f00;
+    }
+    .ttt-box {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 300px;
+        height: 300px;
+        background-color: #09c;
+    }
+    .sort-list {}
+    .sort-list li {
+        width: 200px;
+        height: 30px;
+        margin-bottom: 5px;
+        background-color: #f09;
+    }
+    .ui-rotate-handle {
+        position: absolute;
+        top: -4px;
+        left: 50%;
+        width: 7px;
+        height: 7px;
+        margin-top: -20px;
+        background-color: #fff;
+        border: 1px solid #08a1ef;
+        cursor: e-resize;
+    }
+    .aaa {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 220px;
+        height: 200px;
+        background-color: #009f95;
+    }
+
+    .dialog-msg .dialog-body {
+        color: #0e9aef;
+        background-color: #fff;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, .2);
+    }
+</style>
+</head>
+
+<body>
+<div id="aaa" class="aaa"></div>
+<div id="ttt-box" class="ttt-box">
+    <div id="ttt" class="ttt">
+        <div class="hander">这里拖到</div>
+    </div>
+</div>
+
+<i class="icon icon-loading fa-pulse"></i>
+<i class="fa fa-angle-up fa-spin"></i>
+<p class="text fa-spin">呵呵</p>
+<button id="enable" type="button">enable</button>
+<button id="disable" type="button">disable</button>
+<ul id="sort-list" class="sort-list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+<!--<div id="d" class="dialog">
+    <header class="dialog-header">
+        <h3 class="dialog-title">这是标题</h3>
+    </header>
+    <div class="dialog-body">这是内容</div>
+</div>-->
+<input id="demo-input" class="form-control">
+<script src="../dep/jquery/jquery-1.10.2.min.js"></script>
+<script src="../dist/js/ui.js"></script>
+<script src="../src/js/draggable.js"></script>
+<script src="../src/js/resizable.js"></script>
+<script src="../src/js/rotateable.js"></script>
+<script src="../src/js/sortable.js"></script>
+
+<script>
+
+    /*$('#ttt').draggable({
+        containment: document
+        //axis: 'y',
+        //hander: '.hander'
+    });
+     */
+    $('#ttt').resizable({
+        //handles: 's, se, e',
+    });
+    $("#ttt").rotateable({
+        //handle: ".hander",
+    });
+
+    $('#sort-list').sortable();
+
+
+
+    $('#ttt').fullscreen('toggle');
+    $('#ttt').fullscreen('toggle');
+
+
+
+</script>
+</body>
+</html>

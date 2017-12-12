@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @@include('../components/meta.html')
+
+    <title>eAdmin</title>
+
+    @@include('../components/link.html')
+    <link rel="stylesheet" href="../dep/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../dep/datatable/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/static/css/eadmin.css">
+    <link rel="stylesheet" href="/static/css/admin-index.css">
+    <style>
+        .ui-progress {
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+
+<body>
+@@include('../components/side.html')
+
+<div class="econtent">
+    @@include('../components/header.html')
+    <div class="econtent-body ead-container-main">
+        <!--<div class="row-col">-->
+            <!--<ul class="breadcrumb pull-left">-->
+                <!--<li><a href="#">首页</a></li>-->
+                <!--<li class="active">商品列表</li>-->
+            <!--</ul>-->
+            <!--<div class="pull-right">-->
+                <!--<a class="btn btn-default" href="admin_goods_edit.html">添加商品</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div>
+            <div class="ui-progress">
+                <div class="ui-progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="ui-progress">
+                <div class="ui-progress-bar" style="width: 25%"></div>
+            </div>
+            <div class="ui-progress">
+                <div class="ui-progress-bar" style="width: 50%"></div>
+            </div>
+            <div class="ui-progress">
+                <div class="ui-progress-bar" style="width: 75%"></div>
+            </div>
+            <div class="ui-progress">
+                <div class="ui-progress-bar" style="width: 100%"></div>
+            </div>
+            <div class="ui-progress">
+                <div class="ui-progress-bar" style="width: 25%;">25%</div>
+            </div>
+            <div class="ui-progress" style="height: 1px;">
+                <div class="ui-progress-bar" style="width: 25%;"></div>
+            </div>
+            <div class="ui-progress" style="height: 20px;">
+                <div class="ui-progress-bar" style="width: 25%;"></div>
+            </div>
+
+            <div class="ui-progress">
+                <div class="progress-bar bg-success" style="width: 25%"></div>
+            </div>
+            <div class="ui-progress">
+                <div class="progress-bar bg-info" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="ui-progress">
+                <div class="progress-bar bg-warning" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="ui-progress">
+                <div class="progress-bar bg-danger" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+    @@include('../components/footer.html')
+</div>
+
+<script src="../dep/jquery/jquery-1.10.2.min.js"></script>
+<script src="../dist/js/eui.min.js"></script>
+<script src="../dep/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../src/eadmin/eadmin.js"></script>
+<script src="../dep/datatable/jquery.dataTables.js"></script>
+
+<script src="js/index.js"></script>
+</body>
+</html>

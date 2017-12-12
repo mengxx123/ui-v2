@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @@include('../components/meta.html')
+
+    <title>eAdmin</title>
+
+    @@include('../components/link.html')
+    <link rel="stylesheet" href="../dep/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../dep/datatable/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/static/css/eadmin.css">
+    <link rel="stylesheet" href="/static/css/admin-index.css">
+    <style>
+        .demo-paper {
+            display: inline-block;
+            height: 100px;
+            width: 100px;
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+@@include('../components/side.html')
+
+<div class="econtent">
+    @@include('../components/header.html')
+    <div class="econtent-body ead-container-main">
+        <div>
+            <div class="ui-paper ui-paper-1 demo-paper ui-paper-round">1</div>
+            <div class="ui-paper ui-paper-2 demo-paper ui-paper-round">1</div>
+            <div class="ui-paper ui-paper-3 demo-paper ui-paper-round">1</div>
+            <div class="ui-paper ui-paper-4 demo-paper ui-paper-round">1</div>
+            <div class="ui-paper ui-paper-5 demo-paper ui-paper-round">1</div>
+        </div>
+        <div>
+            <h2>圆形的卡片</h2>
+            <div class="ui-paper ui-paper-1 demo-paper ui-paper-circle">1</div>
+            <div class="ui-paper ui-paper-2 demo-paper ui-paper-circle">1</div>
+            <div class="ui-paper ui-paper-3 demo-paper ui-paper-circle">1</div>
+            <div class="ui-paper ui-paper-4 demo-paper ui-paper-circle">1</div>
+            <div class="ui-paper ui-paper-5 demo-paper ui-paper-circle">1</div>
+        </div>
+    </div>
+    @@include('../components/footer.html')
+</div>
+
+<script src="../dep/jquery/jquery-1.10.2.min.js"></script>
+<script src="../dist/js/eui.min.js"></script>
+<script src="../dep/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../src/eadmin/eadmin.js"></script>
+<script src="../dep/datatable/jquery.dataTables.js"></script>
+
+<script src="js/index.js"></script>
+</body>
+</html>

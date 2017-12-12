@@ -1,0 +1,46 @@
+.gohome a {
+    height: 38px;
+    width: 38px;
+    display: block;
+    background: #2f4050;
+    padding: 9px 8px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    opacity: .5;
+}
+.gohome {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+}
+
+.navy-bg {
+    background-color: #1ab394;
+    color: #fff;
+}
+
+.blue-bg {
+    background-color: #1c84c6;
+    color: #fff;
+}
+.lazur-bg {
+    background-color: #23c6c8;
+    color: #fff;
+}
+.yellow-bg {
+    background-color: #f8ac59;
+    color: #fff;
+}
+.lazur-bg {
+    background-color: #23c6c8;
+    color: #fff;
+}
+
+.gray-bg {
+    background-color: #f3f3f4;
+}
+.bg-white {
+    background-color: #fff;
+}

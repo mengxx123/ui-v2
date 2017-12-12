@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @@include('../components/meta.html')
+
+    <title>eAdmin</title>
+
+    @@include('../components/link.html')
+    <link rel="stylesheet" href="../dep/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../dep/datatable/dataTables.bootstrap.css">
+    <link rel="stylesheet" href="/static/css/eadmin.css">
+    <link rel="stylesheet" href="/static/css/admin-index.css">
+</head>
+
+<body>
+@@include('../components/side.html')
+
+<div class="econtent">
+    @@include('../components/header.html')
+    <div class="econtent-body ead-container-main">
+        <article class="ui-article">
+            Yunser UI 是一个轻量级（所有 CSS 和 JS gzip 后 100 kB 左右）、 Mobile first 的前端框架， 基于开源社区流行前端框架编写。
+
+
+        </article>
+    </div>
+    @@include('../components/footer.html')
+</div>
+
+<script src="../dep/jquery/jquery-1.10.2.min.js"></script>
+<script src="../dist/js/eui.min.js"></script>
+<script src="../dep/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../src/eadmin/eadmin.js"></script>
+<script src="../dep/datatable/jquery.dataTables.js"></script>
+
+<script src="js/index.js"></script>
+</body>
+</html>

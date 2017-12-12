@@ -1,0 +1,365 @@
+//
+// 对话框
+
+// common
+
+
+.dialog-shade {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dialog-shade, .dialog {
+    position: fixed;
+}
+
+.dialog {
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, .3);
+    animation-fill-mode: both;
+    animation-duration: .3s;
+}
+.dialog-header {
+    padding: 20px 80px 0 20px;
+    border-radius: 2px 2px 0 0;
+}
+.dialog-title {
+    color: #333;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dialog-body {
+    position: relative;
+    padding: 20px;
+    word-break: break-all;
+    overflow: hidden;
+    font-size: 14px;
+    overflow: auto;
+}
+
+.dialog-close {
+    position: absolute;
+}
+.dialog-close.icon-close {
+    color: #666;
+}
+.dialog-close.icon-close:hover,
+.dialog-close.icon-close:focus {
+    text-decoration: none;
+}
+
+.dialog-load {
+    background: url(img/loading-0.gif) #fff center center no-repeat;
+}
+.dialog-icon {
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    font-size: 32px!important;
+    line-height: 32px;
+}
+.dialog-ico {
+    background: url(img/icon.png) no-repeat;
+}
+
+/* 动画 */
+
+@-webkit-keyframes bounceIn {
+    /* 默认 */
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.5);
+        transform: scale(.5)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(.5);
+        transform: scale(.5)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+.anim-dialog {
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn
+}
+
+
+
+.dialog-setwin {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 0;
+    line-height: initial;
+}
+.dialog-setwin a {
+    display: inline-block;
+    vertical-align: top;
+}
+.dialog-setwin .icon {
+    font-size: 16px;
+    color: #ccc;
+}
+.dialog-setwin .icon:hover {
+    color: #333;
+}
+.dialog-setwin a {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    font-size: 12px;
+    _overflow: hidden;
+}
+
+.dialog-setwin .dialog-min cite {
+    position: absolute;
+    width: 14px;
+    height: 2px;
+    left: 0;
+    top: 50%;
+    margin-top: -1px;
+    background-color: #2E2D3C;
+    cursor: pointer;
+    _overflow: hidden;
+}
+
+.dialog-setwin .dialog-min:hover cite {
+    background-color: #2D93CA;
+}
+
+.dialog-setwin .dialog-max {
+    background-position: -32px -40px;
+}
+
+.dialog-setwin .dialog-max:hover {
+    background-position: -16px -40px;
+}
+
+.dialog-setwin .dialog-maxmin {
+    background-position: -65px -40px;
+}
+
+.dialog-setwin .dialog-maxmin:hover {
+    background-position: -49px -40px;
+}
+
+.dialog-setwin .dialog-close2 {
+    position: absolute;
+    right: -28px;
+    top: -28px;
+    width: 30px;
+    height: 30px;
+    margin-left: 0;
+    background-position: -149px -31px;
+    _display: none;
+}
+
+.dialog-setwin .dialog-close2:hover {
+    background-position: -180px -31px;
+}
+
+.dialog-footer {
+    text-align: right;
+    padding: 0 16px 16px;
+}
+
+.dialog-footer .btn {
+    margin-left: 8px;
+    border: 1px #dedede solid;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.dialog-footer .btn:hover {
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+.dialog-footer .btn:active {
+    opacity: 0.7;
+}
+
+.dialog-footer .dialog-btn0 {
+    border-color: #4898d5;
+    background-color: #2e8ded;
+    color: #fff;
+}
+
+// common
+.dialog-common {
+    min-width: 280px;
+}
+.dialog-common .dialog-ico {
+    display: inline-block;
+    vertical-align: top;
+}
+.dialog-common .dialog-body .dialog-ico {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+}
+.dialog-common .dialog-padding { // 显示图标时需要加间距
+    padding: 16px 16px 16px 52px;
+    text-align: left;
+}
+
+// page
+.dialog-page {
+    background-color: transparent;
+}
+.dialog-page .dialog-body {
+    position: relative;
+    padding: 0;
+    overflow: auto;
+}
+.dialog-page .dialog-footer {
+    padding-top: 10px;
+}
+
+// iframe
+.dialog-iframe .dialog-footer {
+    padding-top: 10px;
+}
+
+.dialog-iframe .dialog-body {
+    overflow: hidden;
+}
+
+.dialog-iframe iframe {
+    display: block;
+    width: 100%;
+}
+
+// loading
+.dialog-loading {
+    border-radius: 100%;
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+
+.dialog-loading .dialog-body {
+    width: 60px;
+    height: 24px;
+    background: url(img/loading-0.gif) no-repeat;
+}
+
+.dialog-loading .dialog-loading1 {
+    width: 37px;
+    height: 37px;
+    background: url(img/loading-1.gif) no-repeat;
+}
+
+.dialog-loading .dialog-loading2, .dialog-ico16 {
+    width: 32px;
+    height: 32px;
+    background: url(img/loading-2.gif) no-repeat;
+}
+
+// tip
+.dialog-tips {
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+
+.dialog-tips .dialog-body {
+    position: relative;
+    line-height: 22px;
+    min-width: 12px;
+    padding: 5px 10px;
+    font-size: 12px;
+    _float: left;
+    border-radius: 3px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, .3);
+    background-color: #FF9900;
+    color: #fff;
+}
+
+.dialog-tips .dialog-close {
+    right: -2px;
+    top: -1px;
+}
+
+.dialog-tips i.dialog-TipsG {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 8px;
+    border-color: transparent;
+    border-style: dashed;
+}
+
+.dialog-tips i.dialog-TipsT, .dialog-tips i.dialog-TipsB {
+    left: 5px;
+    border-right-style: solid;
+    border-right-color: #FF9900;
+}
+
+.dialog-tips i.dialog-TipsT {
+    bottom: -8px;
+}
+
+.dialog-tips i.dialog-TipsB {
+    top: -8px;
+}
+
+.dialog-tips i.dialog-TipsR, .dialog-tips i.dialog-TipsL {
+    top: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #FF9900;
+}
+
+.dialog-tips i.dialog-TipsR {
+    left: -8px;
+}
+
+.dialog-tips i.dialog-TipsL {
+    right: -8px;
+}
+
+// prompt
+.dialog-prompt textarea.dialog-input {
+    width: 300px;
+    height: 100px;
+    line-height: 20px;
+}
+
+// msg
+.dialog-msg {
+    min-width: 180px;
+    border: 1px solid #D3D4D3;
+    box-shadow: none;
+    min-width: 100px;
+    color: #fff;
+    background-color: #323232;
+    border: none;
+}
+.dialog-msg .dialog-body {
+    padding: 12px 25px;
+    text-align: center;
+}
